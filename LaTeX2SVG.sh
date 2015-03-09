@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author: Matthew Feickert
-# Date: 2015-03-05
+# Date: 2015-03-09
 # Description: This script takes a LaTeX file and will extract
 # the text or image in it, and export it to a SVG.
 # NOTE: The LaTeX document MUST use \pagestyle{empty} to avoid
@@ -9,13 +9,13 @@
 # Check to make sure a file was passed
 if [ $# -eq 0 ]
 then
-  echo "LaTeX file name needed as input."
+  echo "A LaTeX file (.tex) is needed as input."
   exit 1
 fi
 # Check to make sure a LaTeX file was passed
 if [ "${1:(-4)}" != ".tex" ]
 then
-  echo "Need to pass a .tex file."
+  echo "A LaTeX file (.tex) is needed as input."
   exit 1
 fi
 # LaTeX -> SVG Script
